@@ -12,7 +12,7 @@
         var mailtag = document.createElement("a")
         var bincontent = document.createTextNode("00101010");
         mailtag.appendChild(bincontent);
-        mailtag.setAttribute("id", "hili")
+        mailtag.setAttribute("class", "blink_me")
         mailtag.setAttribute("href", "mailto:ragingtigerwebdev@gmail.com")
 
         if (window.screen.width < 450 && window.screen.height > 550) {
@@ -45,10 +45,18 @@
         text-align: left;
         font-size: 1.35vmax;
       }
-      .hili {
+
+      .blink_me {
         font-size: -3;
         color: red;
         text-decoration: none;
+        animation: blinker 4s linear infinite;
+      }
+
+      @keyframes blinker {
+        50% {
+          opacity: 0;
+        }
       }
     </style>
   </head>
